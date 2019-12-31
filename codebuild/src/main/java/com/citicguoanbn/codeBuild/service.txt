@@ -1,7 +1,7 @@
 package {PACKAGENAME}.service.{FUNNAME};
 
 import {PACKAGENAME}.po.{FUNNAME}.{CLASSNAME}DO;
-import com.citicguoanbn.service.IBaseService;
+import com.java.base.service.IBaseService;
 
 /**
  * @function 功能 :{FUNNAME} Service层业务实现接口

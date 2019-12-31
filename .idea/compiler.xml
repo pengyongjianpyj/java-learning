@@ -12,7 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="base-service" target="1.5" />
+      <module name="base-service" target="6" />
       <module name="codebuild" target="1.8" />
       <module name="test-service" target="1.8" />
     </bytecodeTargetLevel>
