@@ -12,13 +12,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="base-service" target="6" />
+      <module name="base-service" target="1.8" />
       <module name="codebuild" target="1.8" />
       <module name="test-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="base-service" options="-parameters" />
       <module name="codebuild" options="-parameters" />
       <module name="test-service" options="-parameters" />
     </option>

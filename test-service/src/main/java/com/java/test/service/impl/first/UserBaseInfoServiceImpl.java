@@ -1,12 +1,14 @@
 package com.java.test.service.impl.first;
 
 import com.java.base.mapper.IBaseMapper;
-import com.java.base.service.impl.BaseServiceImpl;
+import com.java.base.service.BaseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.java.test.mapper.first.UserBaseInfoDOMapper;
 import com.java.test.po.first.UserBaseInfoDO;
 import com.java.test.service.first.UserBaseInfoService;
+
+import java.util.List;
 
 /**
  * @function 功能 : first Service层业务实现
@@ -24,5 +26,10 @@ public class UserBaseInfoServiceImpl extends BaseServiceImpl<UserBaseInfoDO> imp
         return mapper;
     }
 
+    @Override
+    public List<UserBaseInfoDO> listAllDO() {
+        List<UserBaseInfoDO> userBaseInfoDOS = mapper.listAllDO();
+        return userBaseInfoDOS;
+    }
 }
 

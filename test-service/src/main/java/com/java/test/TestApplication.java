@@ -1,5 +1,6 @@
 package com.java.test;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @RequestMapping
+@MapperScan("com.java.test.mapper")
 public class TestApplication {
 
     public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class TestApplication {
     }
 
     @RequestMapping("/")
-    public String hello(){
+    public String hello() throws Exception {
         return "hello world!";
     }
 }

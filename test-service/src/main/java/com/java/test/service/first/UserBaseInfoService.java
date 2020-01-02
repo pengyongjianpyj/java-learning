@@ -3,6 +3,8 @@ package com.java.test.service.first;
 import com.java.base.service.IBaseService;
 import com.java.test.po.first.UserBaseInfoDO;
 
+import java.util.List;
+
 /**
  * @function 功能 :first Service层业务实现接口
  * @author   创建人:
@@ -10,6 +12,8 @@ import com.java.test.po.first.UserBaseInfoDO;
  */
 
 public interface UserBaseInfoService extends IBaseService<UserBaseInfoDO> {
+
+    List<UserBaseInfoDO> listAllDO();
 
 }
 

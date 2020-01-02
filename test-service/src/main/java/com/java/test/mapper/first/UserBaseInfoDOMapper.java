@@ -4,6 +4,8 @@ import com.java.base.mapper.IBaseMapper;
 import com.java.test.po.first.UserBaseInfoDO;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @function 功能:first dao层业务接口
  * @author   创建人:
@@ -11,7 +13,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserBaseInfoDOMapper extends IBaseMapper<UserBaseInfoDO> {
-	
+
+    List<UserBaseInfoDO> listAllDO();
 }
 
 

@@ -1,10 +1,9 @@
-package com.java.base.service.impl;
+package com.java.base.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.java.base.po.BaseDO;
 import com.java.base.mapper.IBaseMapper;
-import com.java.base.service.IBaseService;
+import com.java.base.po.BaseDO;
 
 import java.util.List;
 import java.util.Map;
