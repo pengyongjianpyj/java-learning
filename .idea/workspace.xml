@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad54913f-b203-4836-8448-e97eac75afb2" name="Default Changelist" comment="冒泡排序，文件递归">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_java_base_base_service_1_0_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_26.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_17.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_4.xml" beforeDir="false" />
@@ -20,10 +18,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_1_7_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_7_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_1_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/.gitignore" afterDir="false" />
-    </list>
-    <list id="5520e64c-d7c5-464c-920a-d8fd671e2d90" name="printFile" comment="">
-      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Recursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/base-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codebuild/codebuild.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/codebuild/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -132,14 +131,14 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ad54913f-b203-4836-8448-e97eac75afb2" name="Default Changelist" comment="" />
-      <changelist id="5520e64c-d7c5-464c-920a-d8fd671e2d90" name="printFile" comment="" />
+      <changelist id="" name="printFile" comment="" />
       <created>1577717532762</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577717532762</updated>
       <workItem from="1577717534177" duration="1255000" />
       <workItem from="1581305117694" duration="329000" />
-      <workItem from="1582873826108" duration="8785000" />
+      <workItem from="1582873826108" duration="9374000" />
     </task>
     <task id="LOCAL-00001" summary="冒泡排序，文件递归">
       <created>1582886065291</created>
@@ -148,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582886065291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="忽略">
+      <created>1582886251776</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582886251776</updated>
+    </task>
+    <task id="LOCAL-00003" summary="printFile">
+      <created>1582886405056</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582886405056</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +182,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="冒泡排序，文件递归" />
-    <option name="LAST_COMMIT_MESSAGE" value="冒泡排序，文件递归" />
+    <MESSAGE value="忽略" />
+    <MESSAGE value="printFile" />
+    <option name="LAST_COMMIT_MESSAGE" value="printFile" />
   </component>
 </project>
