@@ -10,20 +10,20 @@ import java.util.HashMap;
  * date:2018-05-08
  */																																																																																																																																																																																																																																																																																																																																																																																						
 public class CodeEngine {
-	private static final String PACKAGENAME = "com.founder.apabi";
-	private static final String PATHNAME = "com/founder/apabi";
+	private static final String PACKAGENAME = "com.java.test";
+	private static final String PATHNAME = "com/java/test";
 	private static final String SERVICEAPPNAME="csc";//service项目名,以及模板文件所在项目名
 	private static final String CLIENTAPPRNAME="";//client项目名
 	
 	//数据库表名
-	private static final String TABLENAME = "sys_user";
+	private static final String TABLENAME = "user_base_info";
 	private static final String TABLESCHEMA = "test";//
 	private static final String TABLEKEY = "id";   //表主键
 	
 	private String INDEXDISFIELD = ""; //列表显示字段
 	private String SEARCHFIELD = "";   //列表搜索字段
-	private static final String FUNNAME = "enterprise";  //功能名称
-	private static final String FUNCPATH = "";
+	private static final String FUNNAME = "first";  //功能名称
+	private static final String FUNCPATH = "first";
 	
 	//功能名称
 	private static final String AUTHOR = "caoshichuan";
@@ -34,13 +34,13 @@ public class CodeEngine {
 	public static final String TEMPLATEPATH = "src/main/java/com/citicguoanbn/codeBuild/";  //模板路径
 
 	/**** 生成后文件存放的位置  ******/
-	public static final String POJO_SAVEPATH = ROOT_SAVEPATH+"/po";  //pojo类存放的位置
-	public static final String MAPPER_SAVEPATH = RESOURCES_PATH+"/mapper";  //pojo类存放的位置
-	public static final String DAO_SAVEPATH = ROOT_SAVEPATH+"/mapper";  //dao接口存放的位置
-	public static final String SQLMAP_SAVEPATH = ROOT_SAVEPATH+"/dao";  //ibatis的sql.xml文件存放的位置
-	public static final String DAOIMPL_SAVEPATH = ROOT_SAVEPATH+"/dao/impl";  //dao接口实现类存放的位置
-	public static final String SERVICE_SAVEPATH = ROOT_SAVEPATH+"/service";  //service实现类存放的位置
-	public static final String SERVICEIMPL_SAVEPATH_IMPL = ROOT_SAVEPATH+"/service/impl";  //service实现类存放的位置
+	public static final String POJO_SAVEPATH = ROOT_SAVEPATH+"/po/"+FUNNAME;  //pojo类存放的位置
+	public static final String MAPPER_SAVEPATH = RESOURCES_PATH+"/mapper/"+FUNNAME;  //pojo类存放的位置
+	public static final String DAO_SAVEPATH = ROOT_SAVEPATH+"/mapper/"+FUNNAME;  //dao接口存放的位置
+	public static final String SQLMAP_SAVEPATH = ROOT_SAVEPATH+"/dao/"+FUNNAME;  //ibatis的sql.xml文件存放的位置
+	public static final String DAOIMPL_SAVEPATH = ROOT_SAVEPATH+"/dao/impl/"+FUNNAME;  //dao接口实现类存放的位置
+	public static final String SERVICE_SAVEPATH = ROOT_SAVEPATH+"/service/"+FUNNAME;  //service实现类存放的位置
+	public static final String SERVICEIMPL_SAVEPATH_IMPL = ROOT_SAVEPATH+"/service/impl/"+FUNNAME;  //service实现类存放的位置
 
 	public static final String WEBROOT_PATH = "src/main/webapp/";  //WEB根目录
 
