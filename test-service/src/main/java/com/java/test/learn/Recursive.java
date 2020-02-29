@@ -1,4 +1,4 @@
-package com.java.test;
+package com.java.test.learn;
 
 import java.io.File;
 import java.nio.file.Path;

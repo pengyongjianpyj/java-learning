@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad54913f-b203-4836-8448-e97eac75afb2" name="Default Changelist" comment="冒泡排序，文件递归">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/TestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/TestRuntimeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/base-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/base-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codebuild/codebuild.iml" beforeDir="false" afterPath="$PROJECT_DIR$/codebuild/codebuild.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Recursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/Recursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/contoller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/contoller/TestController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +43,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -53,11 +59,11 @@
   </component>
   <component name="RunManager" selected="Application.Sort">
     <configuration name="Recursive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.test.Recursive" />
+      <option name="MAIN_CLASS_NAME" value="com.java.test.learn.Recursive" />
       <module name="test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.java.test.*" />
+          <option name="PATTERN" value="com.java.test.learn.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -66,11 +72,11 @@
       </method>
     </configuration>
     <configuration name="Sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.test.Sort" />
+      <option name="MAIN_CLASS_NAME" value="com.java.test.learn.Sort" />
       <module name="test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.java.test.*" />
+          <option name="PATTERN" value="com.java.test.learn.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,7 +135,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ad54913f-b203-4836-8448-e97eac75afb2" name="Default Changelist" comment="" />
-      <changelist id="" name="printFile" comment="" />
       <created>1577717532762</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -137,6 +142,7 @@
       <workItem from="1577717534177" duration="1255000" />
       <workItem from="1581305117694" duration="329000" />
       <workItem from="1582873826108" duration="9374000" />
+      <workItem from="1582943397745" duration="1932000" />
     </task>
     <task id="LOCAL-00001" summary="冒泡排序，文件递归">
       <created>1582886065291</created>
