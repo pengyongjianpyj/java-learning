@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad54913f-b203-4836-8448-e97eac75afb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/NioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/contoller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/contoller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/NioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/NioTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +150,7 @@
       <workItem from="1577717534177" duration="1255000" />
       <workItem from="1581305117694" duration="329000" />
       <workItem from="1582873826108" duration="9374000" />
-      <workItem from="1582943397745" duration="6177000" />
+      <workItem from="1582943397745" duration="6354000" />
     </task>
     <task id="LOCAL-00001" summary="冒泡排序，文件递归">
       <created>1582886065291</created>
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582951807063</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="excption">
+      <created>1582979186553</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582979186553</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

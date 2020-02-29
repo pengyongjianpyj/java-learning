@@ -17,7 +17,6 @@ public class NioTest {
 
     private static void io(File file) throws IOException {
         InputStream input = new FileInputStream(file); // get the InputStream from the client socket
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 
         String nameLine   = reader.readLine();
