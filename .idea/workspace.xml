@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list default="true" id="ad54913f-b203-4836-8448-e97eac75afb2" name="Default Changelist" comment="冒泡排序，文件递归">
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/TestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/TestRuntimeException.java" afterDir="false" />
     <list default="true" id="ad54913f-b203-4836-8448-e97eac75afb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/NioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/NioTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Generate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-service/base-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base-service/base-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codebuild/codebuild.iml" beforeDir="false" afterPath="$PROJECT_DIR$/codebuild/codebuild.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Recursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/Recursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/learn/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/contoller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/contoller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Recursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/test-service/src/main/java/com/java/test/Recursive.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,20 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NioTest">
-    <configuration name="NioTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.test.learn.NioTest" />
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.java.test.learn.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Sort">
     <configuration name="Recursive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.java.test.learn.Recursive" />
       <module name="test" />
@@ -116,13 +127,11 @@
       <item itemvalue="Application.Sort" />
       <item itemvalue="Application.StringUtils" />
       <item itemvalue="Spring Boot.TestApplication" />
-      <item itemvalue="Application.NioTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NioTest" />
-        <item itemvalue="Application.Recursive" />
         <item itemvalue="Application.Sort" />
+        <item itemvalue="Application.Recursive" />
         <item itemvalue="Application.StringUtils" />
       </list>
     </recent_temporary>
@@ -150,7 +159,8 @@
       <workItem from="1577717534177" duration="1255000" />
       <workItem from="1581305117694" duration="329000" />
       <workItem from="1582873826108" duration="9374000" />
-      <workItem from="1582943397745" duration="6354000" />
+      <workItem from="1582887363918" duration="1001000" />
+      <workItem from="1582943397745" duration="1932000" />
     </task>
     <task id="LOCAL-00001" summary="冒泡排序，文件递归">
       <created>1582886065291</created>
@@ -173,19 +183,20 @@
       <option name="project" value="LOCAL" />
       <updated>1582886405056</updated>
     </task>
-    <task id="LOCAL-00004" summary="excption">
-      <created>1582951807063</created>
+    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="冒泡排序，文件递归">
+      <created>1582887220211</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1582951807063</updated>
+      <updated>1582887220211</updated>
     </task>
-    <task id="LOCAL-00005" summary="excption">
-      <created>1582979186553</created>
+    <task id="LOCAL-00005" summary="1">
+      <created>1582887997014</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1582979186553</updated>
+      <updated>1582887997014</updated>
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
@@ -210,7 +221,9 @@
     <MESSAGE value="冒泡排序，文件递归" />
     <MESSAGE value="忽略" />
     <MESSAGE value="printFile" />
-    <MESSAGE value="excption" />
-    <option name="LAST_COMMIT_MESSAGE" value="excption" />
+    <option name="LAST_COMMIT_MESSAGE" value="printFile" />
+    <MESSAGE value="冒泡排序，文件递归" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>
