@@ -25,7 +25,6 @@ public class TestController {
         List<UserBaseInfoDO> userBaseInfoS = userBaseInfoService.listAll();
         List<UserBaseInfoDO> userBaseInfoDOS = userBaseInfoService.listAllDO();
         UserBaseInfoDO userBaseInfoDO = userBaseInfoDOS.get(0);
-        new ArrayList<>()
         return "hello world!" + userBaseInfoDO;
     }
 }
