@@ -15,8 +15,13 @@ public class NioSocketClient {
 
         Selector selector = Selector.open();
         channel.register(selector, SelectionKey.OP_CONNECT);
-
-        channel.connect(new InetSocketAddress("127.0.0.1", 8888));
+        while (true){
+            Thread.sleep(100L);
+            boolean connect = channel.connect(new InetSocketAddress("192.168.0.103", 8888));
+            if(connect){
+                break;
+            }
+        }
 
         while (true){
             Thread.sleep(100L);
