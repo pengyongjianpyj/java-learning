@@ -10,16 +10,23 @@ import java.util.Set;
 
 public class NioSocketClient {
 
-    private static Node node;
+    private static String msg;
+    private static String name;
 
     public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        while (name == null || "".equals(name) || name.length() > 20){
+            System.err.println("请输入你的昵称(1-20个字符)：");
+            name = scanner.nextLine();
+        }
+
         SocketChannel channel = SocketChannel.open();
         channel.configureBlocking(false);
 
         Selector selector = Selector.open();
         SelectionKey selectionKeyMain = channel.register(selector, SelectionKey.OP_CONNECT);
-        channel.connect(new InetSocketAddress("39.105.76.39", 8888));
-//        channel.connect(new InetSocketAddress("localhost", 8888));
+//        channel.connect(new InetSocketAddress("39.105.76.39", 8888));
+        channel.connect(new InetSocketAddress("localhost", 8888));
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -27,8 +34,7 @@ public class NioSocketClient {
                     try {
                         Thread.sleep(20L);
                         Scanner scanner = new Scanner(System.in);
-                        String msg = scanner.nextLine();
-                        node = new Node(0, "localhost", msg);
+                        msg = scanner.nextLine();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -48,14 +54,14 @@ public class NioSocketClient {
                     if (selectionKey.isConnectable()) {
                         if (channel.finishConnect()) {
                             channel.register(selector, SelectionKey.OP_READ);
-                            doWriteRequest((SocketChannel) selectionKey.channel(), "hello Server!", null);
+                            doWriteRequest((SocketChannel) selectionKey.channel(), name);
                         }
                     }
                     if (selectionKey.isReadable()) {
                         doRead(selectionKey);
-                        if (node != null) {
-                            synchronized (node) {
-                                doWriteRequest(channel, node.getMsg(), node);
+                        if (msg != null) {
+                            synchronized (msg) {
+                                doWriteRequest(channel, name + "\t" + msg);
                             }
                         }
                     }
@@ -68,23 +74,23 @@ public class NioSocketClient {
         }
     }
 
-    private static void doWriteRequest(SocketChannel channel, String msg, Node node) throws Exception {
+    private static void doWriteRequest(SocketChannel channel, String msg) throws Exception {
         if (msg == null) {
             return;
         }
-        //创建ByteBuffer对象，会放入数据
+        // 创建ByteBuffer对象，会放入数据
         ByteBuffer byteBuffer = ByteBuffer.allocate(msg.getBytes().length);
         byteBuffer.put(msg.getBytes());
         byteBuffer.flip();
-        //写数据
+
         channel.write(byteBuffer);
         if(!byteBuffer.hasRemaining()) {
-            NioSocketClient.node = null;
+            NioSocketClient.msg = null;
             System.err.println("Send request success...");
         }
     }
 
-    //读取服务端的响应
+    // 读取服务端的响应
     private static void doRead(SelectionKey selectionKey) throws Exception{
         SocketChannel socketChannel = ((SocketChannel) selectionKey.channel());
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);

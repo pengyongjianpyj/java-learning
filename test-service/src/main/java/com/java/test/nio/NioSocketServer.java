@@ -1,10 +1,11 @@
 package com.java.test.nio;
 
 import java.net.InetSocketAddress;
-import java.net.SocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.*;
-import java.util.LinkedList;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
 import java.util.List;
 import java.util.Set;
 
@@ -34,8 +35,7 @@ public class NioSocketServer {
                     }
                     if (selectionKey.isAcceptable()) {
                         acceptConnection(selectionKey, selector);
-                    }
-                    if (selectionKey.isReadable()) {
+                    } else if (selectionKey.isReadable()) {
                         String read = readFromSelectionKey(selectionKey);
                         SocketChannel channel = (SocketChannel)selectionKey.channel();
                         String user = channel.getRemoteAddress().toString();
@@ -55,7 +55,6 @@ public class NioSocketServer {
                 }
             }
         }
-
     }
 
     private static void doWrite(SelectionKey selectionKey, String send) throws Exception {
@@ -88,9 +87,9 @@ public class NioSocketServer {
         ServerSocketChannel channel = (ServerSocketChannel) selectionKey.channel();
         SocketChannel accept = channel.accept();
         if (accept != null) {
-            System.err.println("accept connection ...");
             accept.configureBlocking(false);
             accept.register(selector, SelectionKey.OP_READ);
+            System.err.println("accept connection ...");
         }
     }
 

@@ -1,11 +1,14 @@
 package com.java.test.nio;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class NioQueue {
+    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     /** size */
     private int size;
     /** 最早留言 */
@@ -17,7 +20,6 @@ public class NioQueue {
     private Node[] nodes;
     private Map<String, Integer> userIndexMap;
 
-
     /**
      *
      * @param size 1-1000
@@ -28,7 +30,7 @@ public class NioQueue {
         start = 0;
         end = 0;
         nodes = new Node[size];
-        nodes[0] = new Node(0, "/127.0.0.1:0000", "begin");
+        nodes[0] = new Node(0, "/127.0.0.1:0000", format.format(new Date()), "begin");
         System.out.println(Node.toString(nodes[0]));
         userIndexMap = new ConcurrentHashMap<>();
     }
@@ -78,7 +80,7 @@ public class NioQueue {
         } else {
             end++;
         }
-        nodes[end] = new Node(end, user,msg);
+        nodes[end] = new Node(end, user, format.format(new Date()),msg);
         return nodes[end];
     }
 }

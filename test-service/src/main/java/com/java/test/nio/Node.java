@@ -1,23 +1,21 @@
 package com.java.test.nio;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
 public class Node{
-    private static SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private int index;
-    private String date;
     private String user;
+    private String date;
     private String msg;
 
-    public Node(int index, String user, String msg) {
+    public Node(int index, String user, String date, String msg) {
         this.index = index;
         this.user = user;
+        this.date = date;
         this.msg = msg;
-        this.date = format.format(new Date());
     }
 
     public int getIndex() {
@@ -48,16 +46,6 @@ public class Node{
         this.msg = msg;
     }
 
-    @Override
-    public String toString() {
-        return "Node{" +
-                "index=" + index +
-                ", date='" + date + '\'' +
-                ", user='" + user + '\'' +
-                ", msg='" + msg + '\'' +
-                '}';
-    }
-
     public static String toString(Node node) {
         if (node == null) {
             return "";
@@ -74,24 +62,11 @@ public class Node{
             if (node == null) {
                 continue;
             }
-            stringBuilder.append("\n").append(node.getUser()).append("\t").append(node.getDate()).append("\n").append(node.getMsg());
+            stringBuilder.append("\n").append(node.getUser())
+                    .append("\t").append(node.getDate())
+                    .append("\n").append(node.getMsg());
         }
         return stringBuilder.toString();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Node node = (Node) o;
-        return index == node.index &&
-                Objects.equals(date, node.date) &&
-                Objects.equals(user, node.user) &&
-                Objects.equals(msg, node.msg);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(index, date, user, msg);
-    }
 }
