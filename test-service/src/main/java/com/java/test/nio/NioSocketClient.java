@@ -1,30 +1,43 @@
-package com.java.test.learn;
+package com.java.test.nio;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
+import java.util.Scanner;
 import java.util.Set;
 
 public class NioSocketClient {
+
+    private static Node node;
 
     public static void main(String[] args) throws Exception {
         SocketChannel channel = SocketChannel.open();
         channel.configureBlocking(false);
 
         Selector selector = Selector.open();
-        channel.register(selector, SelectionKey.OP_CONNECT);
-        while (true){
-            Thread.sleep(100L);
-            boolean connect = channel.connect(new InetSocketAddress("192.168.0.103", 8888));
-            if(connect){
-                break;
+        SelectionKey selectionKeyMain = channel.register(selector, SelectionKey.OP_CONNECT);
+        channel.connect(new InetSocketAddress("39.105.76.39", 8888));
+//        channel.connect(new InetSocketAddress("localhost", 8888));
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    try {
+                        Thread.sleep(20L);
+                        Scanner scanner = new Scanner(System.in);
+                        String msg = scanner.nextLine();
+                        node = new Node(0, "localhost", msg);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-        }
+        }).start();
 
         while (true){
-            Thread.sleep(100L);
+            Thread.sleep(300L);
             selector.select(1000);
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
             for (SelectionKey selectionKey : selectionKeys) {
@@ -35,13 +48,18 @@ public class NioSocketClient {
                     if (selectionKey.isConnectable()) {
                         if (channel.finishConnect()) {
                             channel.register(selector, SelectionKey.OP_READ);
-                            doWriteRequest((SocketChannel) selectionKey.channel());
+                            doWriteRequest((SocketChannel) selectionKey.channel(), "hello Server!", null);
                         }
                     }
                     if (selectionKey.isReadable()) {
                         doRead(selectionKey);
+                        if (node != null) {
+                            synchronized (node) {
+                                doWriteRequest(channel, node.getMsg(), node);
+                            }
+                        }
                     }
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                     selectionKey.channel().close();
                     selectionKey.cancel();
@@ -50,16 +68,18 @@ public class NioSocketClient {
         }
     }
 
-    private static void doWriteRequest(SocketChannel channel) throws Exception {
-        System.err.println("start connect ...");
-
+    private static void doWriteRequest(SocketChannel channel, String msg, Node node) throws Exception {
+        if (msg == null) {
+            return;
+        }
         //创建ByteBuffer对象，会放入数据
-        ByteBuffer byteBuffer = ByteBuffer.allocate("Hello Server!".getBytes().length);
-        byteBuffer.put("Hello Server!".getBytes());
+        ByteBuffer byteBuffer = ByteBuffer.allocate(msg.getBytes().length);
+        byteBuffer.put(msg.getBytes());
         byteBuffer.flip();
         //写数据
         channel.write(byteBuffer);
         if(!byteBuffer.hasRemaining()) {
+            NioSocketClient.node = null;
             System.err.println("Send request success...");
         }
     }
@@ -76,6 +96,6 @@ public class NioSocketClient {
         } else if (read == 0) {
             return ;
         }
-        System.out.println("Recv:" + new String(byteBuffer.array(), 0 ,read));
+        System.out.println(new String(byteBuffer.array(), 0 ,read));
     }
 }

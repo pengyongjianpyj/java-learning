@@ -1,14 +1,19 @@
-package com.java.test.learn;
+package com.java.test.nio;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 public class NioSocketServer {
 
+    static NioQueue nioQueue;
+
     public static void main(String[] args) throws Exception{
+        nioQueue = new NioQueue(100);
         // 创建非阻塞 ServerChannel
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.bind(new InetSocketAddress(8888), 1024);
@@ -32,8 +37,16 @@ public class NioSocketServer {
                     }
                     if (selectionKey.isReadable()) {
                         String read = readFromSelectionKey(selectionKey);
-                        System.out.println(read);
-                        doWrite(selectionKey, "received");
+                        SocketChannel channel = (SocketChannel)selectionKey.channel();
+                        String user = channel.getRemoteAddress().toString();
+                        Node node = nioQueue.setNode(user, read);
+                        if (node != null) {
+                            System.out.println(Node.toString(node));
+                        }
+                        List<Node> nodes = nioQueue.getNodes(user);
+                        if (nodes != null) {
+                            doWrite(selectionKey, Node.toString(nodes));
+                        }
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
