@@ -59,8 +59,8 @@ public class NioSocketServer {
 
     private static void doWrite(SelectionKey selectionKey, String send) throws Exception {
         SocketChannel channel = (SocketChannel) selectionKey.channel();
-        ByteBuffer buffer = ByteBuffer.allocate(send.getBytes().length);
-        buffer.put(send.getBytes());
+        ByteBuffer buffer = ByteBuffer.allocate(send.getBytes("UTF-8").length);
+        buffer.put(send.getBytes("UTF-8"));
         buffer.flip();
         channel.write(buffer);
     }
@@ -80,7 +80,7 @@ public class NioSocketServer {
             return "";
         }
         buffer.flip();
-        return new String(buffer.array(), 0, read);
+        return new String(buffer.array(), 0, read, "UTF-8");
     }
 
     private static void acceptConnection(SelectionKey selectionKey, Selector selector) throws Exception {
