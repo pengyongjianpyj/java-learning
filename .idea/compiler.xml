@@ -8,7 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="codebuild" />
         <module name="base-service" />
-        <module name="test" />
+        <module name="websocket-service" />
+        <module name="test-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="codebuild" target="1.8" />
       <module name="test" target="1.8" />
       <module name="test-service" target="1.8" />
+      <module name="websocket-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -24,6 +26,7 @@
       <module name="codebuild" options="-parameters" />
       <module name="test" options="-parameters" />
       <module name="test-service" options="-parameters" />
+      <module name="websocket-service" options="-parameters" />
     </option>
   </component>
 </project>

@@ -14,7 +14,7 @@
     <groupId>com.java.base</groupId>
     <artifactId>base-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>base</name>
+    <name>base-service</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
