@@ -1,6 +1,6 @@
 package com.java;
 
-import com.java.spring.TestService;
+import com.java.spring.service.TestService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class XmlApplication {
