@@ -1,8 +1,6 @@
 package com.java.test.learn;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.util.Objects;
 
 public class Recursive {
 
@@ -19,16 +17,19 @@ public class Recursive {
         if (file.isDirectory()) { // 目录
             File[] files = file.listFiles();
             if (files == null || files.length == 0) {
+                file.delete();
+                printFile(file);
                 return ;
             }
             for (File fileChild : files) { // 遍历目录
                 recursive1(fileChild); // 递归file
             }
         } else { // 文件
+
         }
     }
 
-    private static void printeFile(File file) {
+    private static void printFile(File file) {
         System.err.println(file.getPath() + "\\" + file.getName());
     }
 
