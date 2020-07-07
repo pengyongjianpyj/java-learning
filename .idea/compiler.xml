@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="codebuild" />
+        <module name="spring-service" />
         <module name="base-service" />
         <module name="websocket-service" />
         <module name="test-service" />
@@ -15,6 +16,8 @@
     <bytecodeTargetLevel>
       <module name="base-service" target="1.8" />
       <module name="codebuild" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="spring-service" target="1.5" />
       <module name="test" target="1.8" />
       <module name="test-service" target="1.8" />
       <module name="websocket-service" target="1.8" />
@@ -24,6 +27,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="base-service" options="-parameters" />
       <module name="codebuild" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="test" options="-parameters" />
       <module name="test-service" options="-parameters" />
       <module name="websocket-service" options="-parameters" />

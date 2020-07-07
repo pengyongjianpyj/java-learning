@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/base-service/base-service.iml" filepath="$PROJECT_DIR$/base-service/base-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/codebuild/codebuild.iml" filepath="$PROJECT_DIR$/codebuild/codebuild.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-service/spring-service.iml" filepath="$PROJECT_DIR$/spring-service/spring-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-service/test-service.iml" filepath="$PROJECT_DIR$/test-service/test-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/websocket-service/websocket-service.iml" filepath="$PROJECT_DIR$/websocket-service/websocket-service.iml" />
     </modules>
