@@ -9,5 +9,8 @@ public class XmlApplication {
         TestService testService = (TestService) applicationContext.getBean("TestService");
         testService.test();
         int i = 1;
+        ThreadLocal<Object> threadLocal = new ThreadLocal<Object>();
+        threadLocal.set("1234");
+        Object o = threadLocal.get();
     }
 }
