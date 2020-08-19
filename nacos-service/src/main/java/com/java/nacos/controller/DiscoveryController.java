@@ -2,6 +2,7 @@ package com.java.nacos.controller;
 
 import com.alibaba.nacos.api.annotation.NacosInjected;
 import com.alibaba.nacos.api.naming.NamingService;
+import com.java.nacos.client.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,8 @@ public class DiscoveryController {
 
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private ClientService clientService;
 
 //    @GetMapping(value = "/get")
 //    @ResponseBody
@@ -27,7 +30,8 @@ public class DiscoveryController {
 
     @GetMapping(value = "/echo/{str}")
     public String echo(@PathVariable String str){
-        return restTemplate.getForObject("http://provider/echo/" + str, String.class);
+        return clientService.echoProvider(str);
+//        return restTemplate.getForObject("http://provider/echo/" + str, String.class);
     }
 
 }
