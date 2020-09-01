@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author: zf
  * @create: 2019-12-28
  */
-@FeignClient(value = "provider")
+//@FeignClient(value = "provider", fallbackFactory = HystrixClientFallbackFactory.class)
+@FeignClient(value = "provider", fallback = )
 public interface ClientService {
 
     @GetMapping(value = "/echo/{string}")
