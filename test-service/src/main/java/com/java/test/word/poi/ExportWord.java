@@ -14,12 +14,8 @@ import java.util.Map;
  * @date 2020-09-17 10:38
  */
 public class ExportWord {
-    private XWPFHelperTable xwpfHelperTable = null;
-    private XWPFHelper xwpfHelper = null;
-    public ExportWord() {
-        xwpfHelperTable = new XWPFHelperTable();
-        xwpfHelper = new XWPFHelper();
-    }
+    private XWPFHelperTable xwpfHelperTable = new XWPFHelperTable();
+    private XWPFHelper xwpfHelper = new XWPFHelper();
     /**
      * 创建好文档的基本 标题，表格  段落等部分
      * @return
