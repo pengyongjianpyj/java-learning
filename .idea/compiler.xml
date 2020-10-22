@@ -2,23 +2,34 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-service" />
         <module name="base-service" />
+        <module name="springboot-start" />
+        <module name="provider" />
+        <module name="nacos-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="base-service" target="1.8" />
-      <module name="spring-service" target="1.5" />
+      <module name="nacos-service" target="1.8" />
+      <module name="provider" target="1.8" />
+      <module name="server" target="1.5" />
+      <module name="spring-service" target="6" />
+      <module name="springboot-start" target="1.8" />
       <module name="test-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="base-service" options="-parameters" />
+      <module name="nacos-service" options="-parameters" />
+      <module name="provider" options="-parameters" />
+      <module name="server" options="-parameters" />
+      <module name="springboot-start" options="-parameters" />
     </option>
   </component>
 </project>
