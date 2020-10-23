@@ -1,6 +1,12 @@
+
 server:
   port: 8082
 
 man:
   name: pyj
-  age: 30
+  age: 11
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
