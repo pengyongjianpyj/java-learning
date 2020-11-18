@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="redis-pengyj-starter:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/redis_pengyj_starter_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="redis-pengyj-starter/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="redis-pengyj-starter" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

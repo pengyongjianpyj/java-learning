@@ -21,7 +21,7 @@ class Solution {
 //        int[] nums2 = new int[]{3};
 //        double medianSortedArrays = new Solution().findMedianSortedArrays(nums1, nums2);
 //        System.out.println(medianSortedArrays);
-        System.out.println(new Solution().reverse(123134));
+//        System.out.println(new Solution().reverse(123134));
     }
 
     public int reverse(int x) {
