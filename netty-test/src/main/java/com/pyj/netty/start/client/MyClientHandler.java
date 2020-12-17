@@ -1,4 +1,4 @@
-package com.pyj.netty.bio.start.client;
+package com.pyj.netty.start.client;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

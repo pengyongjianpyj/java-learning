@@ -7,17 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-mybatis" />
         <module name="base-service" />
         <module name="provider" />
-        <module name="redis-pengyj-starter" />
-        <module name="springboot-start" />
         <module name="nacos-service" />
+        <module name="redis-pengyj-starter" />
+        <module name="netty-test" />
+        <module name="springboot-start" />
+        <module name="springboot-mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="base-service" target="1.8" />
       <module name="nacos-service" target="1.8" />
+      <module name="netty-test" target="8" />
       <module name="provider" target="1.8" />
       <module name="redis-pengyj-starter" target="1.8" />
       <module name="server" target="1.5" />

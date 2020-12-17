@@ -1,4 +1,4 @@
-package com.pyj.netty.bio.start.server;
+package com.pyj.netty.start.server;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
