@@ -15,5 +15,8 @@ public class ThreadPoolTest {
         executorService.execute(() -> {
             System.out.println(1);
         });
+        ThreadLocal threadLocal = new ThreadLocal();
+//        ThreadLocal.class.getClassLoader()
+//        threadLocal.set();
     }
 }
