@@ -17,7 +17,6 @@ public class NioSocketClient {
         Scanner scanner = new Scanner(System.in);
         while (name == null || "".equals(name) || name.length() > 20){
             System.err.println("请输入你的昵称(1-20个字符):");
-//            System.err.println("请输入你的昵称(1-20个字符):");
             name = scanner.nextLine();
         }
 
@@ -26,8 +25,8 @@ public class NioSocketClient {
 
         Selector selector = Selector.open();
         SelectionKey selectionKeyMain = channel.register(selector, SelectionKey.OP_CONNECT);
-        channel.connect(new InetSocketAddress("39.105.76.39", 8888));
-//        channel.connect(new InetSocketAddress("localhost", 8888));
+//        channel.connect(new InetSocketAddress("39.105.76.39", 8888));
+        channel.connect(new InetSocketAddress("localhost", 8888));
         new Thread(new Runnable() {
             @Override
             public void run() {
