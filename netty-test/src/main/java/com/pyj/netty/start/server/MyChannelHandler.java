@@ -15,7 +15,7 @@ public class MyChannelHandler extends ChannelInboundHandlerAdapter {
 
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) {
 //        super.channelRead(ctx, msg);
         ByteBuf byteBuf = (ByteBuf) msg;
         String msgStr = byteBuf.toString(CharsetUtil.UTF_8);
@@ -25,7 +25,7 @@ public class MyChannelHandler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
 //        super.exceptionCaught(ctx, cause);
         cause.printStackTrace();
         ctx.close();

@@ -19,7 +19,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     }
 
     @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+    public void channelActive(ChannelHandlerContext ctx) {
         // 向服务端发送数据
         String msg = "hello";
         ctx.writeAndFlush(Unpooled.copiedBuffer(msg, CharsetUtil.UTF_8));
@@ -27,7 +27,7 @@ public class MyClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     }
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         cause.printStackTrace();
         ctx.close();
     }
