@@ -1,7 +1,9 @@
 package com.pyj.netty.start.server;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
@@ -25,7 +27,14 @@ public class MyRPCServer {
                     //配置server通道
                     .channel(NioServerSocketChannel.class)
                     //worker线程的处器
-                    .childHandler(new MyChannelInitializer());
+                    .childHandler(new ChannelInitializer(){
+                        @Override
+                        protected void initChannel(Channel channel) throws Exception {
+                            channel.pipeline()
+                                .addLast(new MyChannelHandler())
+                                .addLast(new MyChannelHandler());
+                        }
+                    });
             ChannelFuture channelFuture = bootstrap.bind(port).sync();
             System.out.println("服务器启动完成，端口为:" + port);
             //等待服务端监听端口关闭
