@@ -12,6 +12,7 @@ public class ExecutorTest {
                 TimeUnit.SECONDS,
                 queue,
                 new RejectedExecutionHandler() {
+                    @Override
                     public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
                         System.out.println("reject");
                     }
@@ -20,9 +21,10 @@ public class ExecutorTest {
 
         for (;;){
             executor.execute(new Runnable() {
+                @Override
                 public void run() {
                     try {
-                        Thread.currentThread().sleep(10000);
+                        Thread.sleep(10000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

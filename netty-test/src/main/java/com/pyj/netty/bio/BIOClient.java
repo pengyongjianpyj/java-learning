@@ -9,7 +9,6 @@ import java.net.Socket;
 /**
  * @author pengyongjian
  * @Description:
- * @date 2020/12/16 下午9:41
  */
 public class BIOClient {
     public static void main(String[] args) throws Exception {

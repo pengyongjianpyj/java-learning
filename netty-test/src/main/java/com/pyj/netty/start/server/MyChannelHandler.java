@@ -9,7 +9,6 @@ import io.netty.util.CharsetUtil;
 /**
  * @author pengyongjian
  * @Description:
- * @date 2020/12/17 下午3:03
  */
 public class MyChannelHandler extends ChannelInboundHandlerAdapter {
 

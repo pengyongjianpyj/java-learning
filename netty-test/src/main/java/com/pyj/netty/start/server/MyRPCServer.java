@@ -12,7 +12,6 @@ import io.netty.handler.logging.LoggingHandler;
 /**
  * @author pengyongjian
  * @Description:
- * @date 2020/12/17 下午2:43
  */
 public class MyRPCServer {
     public void start(int port) throws Exception {

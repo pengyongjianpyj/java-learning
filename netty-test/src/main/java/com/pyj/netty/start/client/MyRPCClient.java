@@ -8,7 +8,6 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 /**
  * @author pengyongjian
  * @Description:
- * @date 2020/12/17 下午3:18
  */
 public class MyRPCClient {
 
