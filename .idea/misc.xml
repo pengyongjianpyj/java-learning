@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/springboot-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/redis-pengyj-starter/pom.xml" />
         <option value="$PROJECT_DIR$/netty-test/pom.xml" />
+        <option value="$PROJECT_DIR$/web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
