@@ -8,7 +8,7 @@ import java.net.URL;
  * @Description:
  * @date 2020-07-22 16:56
  */
-public class ClassLoader {
+public class ClassLoaderTest {
 
     public static void main(String[] args) {
 //        bootstrapClassLoader();
