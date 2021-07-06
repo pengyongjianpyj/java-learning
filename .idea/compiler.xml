@@ -14,6 +14,7 @@
         <module name="springboot-start" />
         <module name="redis-pengyj-starter" />
         <module name="netty-test" />
+        <module name="webflux" />
         <module name="springboot-mybatis" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,8 @@
       <module name="springboot-start" target="1.8" />
       <module name="test-service" target="1.8" />
       <module name="web" target="1.8" />
+      <module name="web (1)" target="1.8" />
+      <module name="webflux" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -41,6 +44,8 @@
       <module name="springboot-mybatis" options="-parameters" />
       <module name="springboot-start" options="-parameters" />
       <module name="web" options="-parameters" />
+      <module name="web (1)" options="-parameters" />
+      <module name="webflux" options="-parameters" />
     </option>
   </component>
 </project>

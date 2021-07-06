@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-start/springboot-start.iml" filepath="$PROJECT_DIR$/springboot-start/springboot-start.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-service/test-service.iml" filepath="$PROJECT_DIR$/test-service/test-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webflux/webflux.iml" filepath="$PROJECT_DIR$/webflux/webflux.iml" />
     </modules>
   </component>
 </project>
